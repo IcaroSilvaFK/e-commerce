@@ -4,7 +4,9 @@ import { api } from "../../configs/axios";
 
 import { Header } from "../../components/Header";
 import { Card } from "../../components/Card";
+import { HeaderMobile } from "../../components/NavigationMobile";
 import { ModalContextProvider } from "../../contexts/modalPorducts";
+import { ModalMobileContextProvider } from "../../contexts/menuMobile";
 import { Modal } from "../../components/Modal";
 
 import { ContainerCards } from "./styles";
@@ -36,13 +38,16 @@ export function HomePage() {
 
   return (
     <ModalContextProvider>
-      <Header />
-      <ContainerCards>
-        {products.map((product, index) => (
-          <Card product={product} key={product.id} />
-        ))}
-      </ContainerCards>
-      <Modal />
+      <ModalMobileContextProvider>
+        <Header />
+        <ContainerCards>
+          {products.map((product, index) => (
+            <Card product={product} key={product.id} />
+          ))}
+        </ContainerCards>
+        <Modal />
+        <HeaderMobile />
+      </ModalMobileContextProvider>
     </ModalContextProvider>
   );
 }

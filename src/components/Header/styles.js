@@ -6,6 +6,9 @@ export const Container = styled.header`
   align-items: center;
 
   padding: 20px 40px;
+  @media (max-width: 500px) {
+    padding: 5px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -16,4 +19,18 @@ export const Title = styled.h1`
 
   color: var(--color-red);
   filter: brightness(1.2);
+`;
+
+export const MobileContainer = styled.div`
+  display: none;
+
+  @media (max-width: 500px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      background-color: transparent;
+    }
+  }
 `;

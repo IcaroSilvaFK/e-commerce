@@ -13,6 +13,10 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 500px) {
+    padding: 0 10px;
+  }
 `;
 
 export const Box = styled.div`
@@ -40,6 +44,9 @@ export const Box = styled.div`
   margin-top: 30px;
 
   height: 85vh;
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 export const Card = styled.div`
@@ -52,6 +59,11 @@ export const Card = styled.div`
 
   border-bottom: 1px solid #eee;
   border-radius: 5px;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
 
 export const Describe = styled.div`
@@ -64,6 +76,12 @@ export const Describe = styled.div`
   strong {
     width: 400px;
   }
+  @media (max-width: 500px) {
+    strong {
+      width: 250px;
+      text-align: center;
+    }
+  }
 `;
 
 export const Footer = styled.div`
@@ -73,6 +91,10 @@ export const Footer = styled.div`
   align-items: center;
 
   justify-content: space-around;
+
+  @media (max-width: 500px) {
+    gap: 25px;
+  }
 `;
 
 export const Button = styled.button`
@@ -113,6 +135,9 @@ export const ContainerFooter = styled.div`
   justify-content: flex-end;
   gap: 10px;
   padding: 10px 0;
+  @media (max-width: 500px) {
+    margin-top: 20px;
+  }
 `;
 
 export const ButtonFinally = styled.button`

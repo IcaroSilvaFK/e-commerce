@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
-import { toBePartiallyChecked } from "@testing-library/jest-dom/dist/matchers";
 
 export const Container = styled.nav`
+  @media (max-width: 500px) {
+    display: none;
+  }
+
   ul {
     display: flex;
     gap: 20px;
